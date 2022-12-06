@@ -46,6 +46,9 @@
   <remove-project name="platform/frameworks/base" />
   <remove-project name="platform/frameworks/libs/systemui" />
   <remove-project name="platform/frameworks/native" />
+  <remove-project name="platform/frameworks/minikin" />
+
+  <!-- hardware -->
   <remove-project name="platform/hardware/interfaces" />
   <remove-project name="platform/hardware/libhardware" />
   <remove-project name="platform/libcore" />

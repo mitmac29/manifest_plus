@@ -120,6 +120,9 @@
   <project path="vendor/qcom/opensource/wfd-commonsys" name="platform_vendor_qcom_opensource_wfd-commonsys" groups="qcom,pdk" remote="aex" />
   <project path="vendor/qcom/opensource/thermal-engine" name="platform_vendor_qcom_opensource_thermal-engine" groups="qcom,pdk-qcom" remote="aex" />
 
+  <!-- Frameworks -->
+  <project path="frameworks/minikin" name="android_frameworks_minikin" remote="lineage" />
+
   <!-- System -->
   <project path="system/tools/dtbtool" name="platform_system_tools_dtbtool" groups="pdk" remote="aex" />
   <project path="system/libziparchive" name="android_system_libziparchive" remote="lineage" />
