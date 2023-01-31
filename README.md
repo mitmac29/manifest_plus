@@ -2,12 +2,11 @@
 <img src="https://raw.githubusercontent.com/AospExtended/Documentation_and_thread-template/10.x/Banner.png" > 
 </p>
 
-AospExtended Twelve
+Aex AfterLife Version.
 ===========
-AospExtended is just an extension to AOSP, through which we 
-are trying to provide a stock AOSP experience along with some important 
-customization features. We have cherry-picked the features from many 
-other projects and hence we are very thankful to them.
+AfterLife is an external version of aex, since aex announced that the project was temporarily suspended until an unspecified time,
+we are fans of aex who don't want aex to stop trying to continue this project,
+and of course in our hearts aex never dies.
 
 Credits
 -------
@@ -22,6 +21,7 @@ Credits
 * [**OmniROM**](https://github.com/omnirom/)
 * [**AOSPA**](https://github.com/aospa/)
 * [**BlissRoms**](https://github.com/BlissRoms)
+* [**WizardPrjkt**](https://t.me/wizardX00T)
 
 How to Build?
 -------------
@@ -30,12 +30,12 @@ To initialize your local repository using the AospExtended trees, use a
 command like this:
 
 ```bash
-repo init -u https://github.com/AospExtended/manifest.git -b 12.1.x
+repo init -u https://github.com/AfterLifePrjkt/manifest_plus.git -b 12L
 ```
 To initialize a shallow clone, which will save even more space & time, use a command like this:
 
 ```bash
-repo init --depth=1 -u https://github.com/AospExtended/manifest.git -b 12.1.x
+repo init --depth=1 -u https://github.com/AfterLifePrjkt/manifest_plus.git -b 12L
 ```
 
 Then to sync up:
@@ -52,26 +52,3 @@ source build/envsetup.sh
 lunch aosp_device_codename-userdebug
 m aex -j$(nproc --all) | tee log.txt
 ```
-## Report build issues
-- For reporting bugs faced on officially supported devices, click [here](https://github.com/AospExtended/issue_tracker#issue-tracker-for-aospextended)
-
-## Maintain Officially
-- If you're building **AospExtended** for an unofficial device and would like to make it official, Check out the link below for more information about the requirements for both you and your device.
-- [Click here for more info](https://github.com/AospExtended/Documentation_and_thread-template) (**Read full README**)
-
-### Important Links:
-
-- [Website](http://www.aospextended.com/)
-- [Download Center](https://downloads.aospextended.com/)
-- [Blog](https://blog.aospextended.com/)
-- [Usage Statistics](https://stats.aospextended.com)
-- [Gerrit Code Review](http://gerrit.aospextended.com/)
-- [Documentation & Thread Template](https://github.com/AospExtended/Documentation_and_thread-template)
-- [BUG Reporting and Issue Tracker](https://github.com/AospExtended/issue_tracker#issue-tracker-for-aospextended)
-- [Extended Devices](https://github.com/AospExtended-devices/) 
-- [Gallery](https://aospextended.com/gallery)
-- [Telegram Channel](https://telegram.me/aospextended/)
-- [Telegram Discussion Group](https://t.me/aospextendedgroup/)
-- [Facebook page!](https://www.facebook.com/aospextended/)
-- [Twitter](https://twitter.com/AospExtendedRom)
-- [Help us translate AospExtended ROM and bring it to the world!](http://translate.aospextended.com/)
