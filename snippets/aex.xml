@@ -22,16 +22,20 @@
            fetch="https://github.com/AospExtended-Devices" 
            revision="refs/heads/12.1.x" />
 
+  <remote  name="afx"
+           fetch="https://github.com/AfterLifePrjkt"
+           revision="refs/heads/12L" />
+
   <remote  name="lineage"
            fetch="https://github.com/LineageOS"
            revision="refs/heads/lineage-19.1" />
 
   <!-- AospExtended -->
-  <project path="manifest" name="manifest" remote="aex" />
+  <project path="manifest" name="manifest_plus" remote="afx" />
   <project path="art" name="platform_art" groups="pdk" remote="aex" />
   <project path="bionic" name="platform_bionic" groups="pdk" remote="aex" />
   <project path="bootable/recovery" name="platform_bootable_recovery" groups="pdk" remote="aex" />
-  <project path="build/make" name="platform_build" groups="pdk" remote="aex" >
+  <project path="build/make" name="platform_build" groups="pdk" remote="afx" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -40,7 +44,7 @@
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
   </project>
-  <project path="build/soong" name="platform_build_soong" groups="pdk,tradefed" remote="aex" >
+  <project path="build/soong" name="platform_build_soong" groups="pdk,tradefed" remote="afx" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
@@ -51,55 +55,55 @@
   <project path="external/colorkt" name="platform_external_colorkt" remote="aex" />
   <project path="external/themelib" name="platform_external_themelib" remote="aex" />
   <project path="external/tinycompress" name="platform_external_tinycompress" groups="pdk" remote="aex" />
-  <project path="frameworks/av" name="platform_frameworks_av" remote="aex" />
-  <project path="frameworks/base" name="platform_frameworks_base" remote="aex" />
+  <project path="frameworks/av" name="platform_frameworks_av" remote="afx" />
+  <project path="frameworks/base" name="platform_frameworks_base" remote="afx" />
   <project path="frameworks/libs/systemui" name="platform_frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs" remote="aex" />
-  <project path="frameworks/native" name="platform_frameworks_native" remote="aex" />
+  <project path="frameworks/native" name="platform_frameworks_native" remote="afx" />
   <project path="hardware/aosp/interfaces" name="platform_hardware_aosp_interfaces" groups="pdk" remote="aex" />
-  <project path="hardware/interfaces" name="platform_hardware_interfaces" groups="pdk" remote="aex" />
-  <project path="hardware/libhardware" name="platform_hardware_libhardware" groups="pdk" remote="aex" />
+  <project path="hardware/interfaces" name="platform_hardware_interfaces" groups="pdk" remote="afx" />
+  <project path="hardware/libhardware" name="platform_hardware_libhardware" groups="pdk" remote="afx" />
   <project path="libcore" name="platform_libcore" groups="pdk" remote="aex" />
   <project path="packages/apps/AEXWallpaperStub" name="platform_packages_apps_AEXWallpaperStub" remote="aex" />
-  <project path="packages/apps/Bluetooth" name="platform_packages_apps_Bluetooth" groups="pdk-fs" remote="aex" />
+  <project path="packages/apps/Bluetooth" name="platform_packages_apps_Bluetooth" groups="pdk-fs" remote="afx" />
   <project path="packages/apps/Camera2" name="platform_packages_apps_Camera2" groups="pdk-fs" remote="aex" />
   <project path="packages/apps/Contacts" name="platform_packages_apps_Contacts" groups="pdk-fs" remote="aex" />
   <project path="packages/apps/DeskClock" name="platform_packages_apps_DeskClock" groups="pdk-fs" remote="aex" />
   <project path="packages/apps/Dialer" name="platform_packages_apps_Dialer" groups="pdk-fs" remote="aex" />
   <project path="packages/apps/DocumentsUI" name="platform_packages_apps_DocumentsUI" groups="pdk-fs" remote="aex" />
-  <project path="packages/apps/Extensions" name="platform_packages_apps_Extensions" remote="aex" />
+  <project path="packages/apps/Extensions" name="platform_packages_apps_Extensions_plus" remote="afx" />
   <project path="packages/apps/Messaging" name="platform_packages_apps_Messaging" groups="pdk-fs" remote="aex" />
   <project path="packages/apps/Launcher3" name="platform_packages_apps_Launcher3" groups="pdk-fs" remote="aex" />
-  <project path="packages/apps/Settings" name="platform_packages_apps_Settings" groups="pdk-fs" remote="aex" />
+  <project path="packages/apps/Settings" name="platform_packages_apps_Settings" groups="pdk-fs" remote="afx" />
   <project path="packages/apps/SettingsIntelligence" name="platform_packages_apps_SettingsIntelligence" groups="pdk-fs" remote="aex" />
   <project path="packages/apps/SimpleDeviceConfig" name="platform_packages_apps_SimpleDeviceConfig" groups="pdk-fs" remote="aex" />
-  <project path="packages/apps/ThemePicker" name="platform_packages_apps_ThemePicker" groups="pdk-fs" remote="aex" />
+  <project path="packages/apps/ThemePicker" name="platform_packages_apps_ThemePicker" groups="pdk-fs" remote="afx" />
   <project path="packages/apps/Updates" name="platform_packages_apps_Updates" remote="aex" />
-  <project path="packages/apps/WallpaperPicker2" name="platform_packages_apps_WallpaperPicker2" groups="pdk-fs" remote="aex" />
-  <project path="packages/modules/adb" name="platform_packages_modules_adb" groups="pdk-fs" remote="aex" />
-  <project path="packages/modules/Permission" name="platform_packages_modules_Permission" groups="pdk-fs" remote="aex" />
-  <project path="packages/modules/Connectivity" name="platform_packages_modules_Connectivity" groups="pdk-fs" remote="aex" />
-  <project path="packages/modules/Wifi" name="platform_packages_modules_Wifi" groups="pdk-fs" remote="aex" />
+  <project path="packages/apps/WallpaperPicker2" name="platform_packages_apps_WallpaperPicker2" groups="pdk-fs" remote="afx" />
+  <project path="packages/modules/adb" name="platform_packages_modules_adb" groups="pdk-fs" remote="afx" />
+  <project path="packages/modules/Permission" name="platform_packages_modules_Permission" groups="pdk-fs" remote="afx" />
+  <project path="packages/modules/Connectivity" name="platform_packages_modules_Connectivity" groups="pdk-fs" remote="afx" />
+  <project path="packages/modules/Wifi" name="platform_packages_modules_Wifi" groups="pdk-fs" remote="afx" />
   <project path="packages/overlays/Themes" name="platform_packages_overlays_Themes" remote="aex" />
-  <project path="packages/providers/DownloadProvider" name="platform_packages_providers_DownloadProvider" groups="pdk-fs" remote="aex" />
-  <project path="packages/providers/MediaProvider" name="platform_packages_providers_MediaProvider" groups="pdk-fs" remote="aex" />
-  <project path="packages/providers/TelephonyProvider" name="platform_packages_providers_TelephonyProvider" groups="pdk-fs" remote="aex" />
+  <project path="packages/providers/DownloadProvider" name="platform_packages_providers_DownloadProvider" groups="pdk-fs" remote="afx" />
+  <project path="packages/providers/MediaProvider" name="platform_packages_providers_MediaProvider" groups="pdk-fs" remote="afx" />
+  <project path="packages/providers/TelephonyProvider" name="platform_packages_providers_TelephonyProvider" groups="pdk-fs" remote="afx" />
   <project path="packages/resources/devicesettings" name="platform_packages_resources_devicesettings" remote="aex" />
-  <project path="packages/services/Telecomm" name="platform_packages_services_Telecomm" groups="pdk-fs" remote="aex" />
+  <project path="packages/services/Telecomm" name="platform_packages_services_Telecomm" groups="pdk-fs" remote="afx" />
   <project path="prebuilts/extract-tools" name="platform_prebuilts_extract-tools" remote="aex" />
   <project path="prebuilts/tools-aosp" name="platform_prebuilts_tools-aosp" remote="aex" />
   <project path="system/bpf" name="platform_system_bpf" groups="pdk" remote="aex" />
-  <project path="system/bt" name="platform_system_bt" groups="pdk" remote="aex" />
+  <project path="system/bt" name="platform_system_bt" groups="pdk" remote="afx" />
   <project path="system/core" name="platform_system_core" groups="pdk" remote="aex" />
   <project path="system/logging" name="platform_system_logging" groups="pdk" remote="aex" />
-  <project path="system/memory/lmkd" name="platform_system_memory_lmkd" groups="pdk" remote="aex" />
+  <project path="system/memory/lmkd" name="platform_system_memory_lmkd" groups="pdk" remote="afx" />
   <project path="system/netd" name="platform_system_netd" groups="pdk" remote="aex" />
-  <project path="system/security" name="platform_system_security" groups="pdk" remote="aex" />
-  <project path="system/sepolicy" name="platform_system_sepolicy" groups="pdk" remote="aex" />
-  <project path="system/vold" name="platform_system_vold" groups="pdk" remote="aex" />
+  <project path="system/security" name="platform_system_security" groups="pdk" remote="afx" />
+  <project path="system/sepolicy" name="platform_system_sepolicy" groups="pdk" remote="afx" />
+  <project path="system/vold" name="platform_system_vold" groups="pdk" remote="afx" />
   <project path="system/tools/mkbootimg" name="platform_system_tools_mkbootimg" groups="pdk" remote="aex" />
   <project path="system/update_engine" name="platform_system_update_engine" groups="pdk" remote="aex" />
   <project path="tools/extract-utils" name="platform_tools_extract-utils" remote="aex" />
-  <project path="vendor/aosp" name="platform_vendor_aosp" remote="aex" />
+  <project path="vendor/aosp" name="platform_vendor_aosp" remote="afx" />
   <project path="vendor/support" name="platform_vendor_support" remote="aex" />
   <project path="vendor/qcom/opensource/power" name="platform_vendor_qcom_opensource_power" groups="qcom,pdk-qcom" remote="aex"  />
 
