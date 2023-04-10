@@ -29,7 +29,17 @@
   <remote  name="lineage"
            fetch="https://github.com/LineageOS"
            revision="refs/heads/lineage-19.1" />
+  
+  <remote name="clang"
+          fetch="https://gitlab.com/sanjeevstunner" />
 
+  <remote name="github1"
+          fetch="https://github.com/mitmac29" />
+ 
+  <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="github1" revision="lineage-19.1" clone-depth="1" />
+  <project path="vendor/dolby" name="vendor_dolby" remote="github1" revision="dolby-1.0-d1" clone-depth="1" />
+  <project path="prebuilts/clang/host/linux-x86/clang-r450784d" name="clang-r450784d" remote="clang" revision="master" clone-depth="1" />
+ 
   <!-- AospExtended -->
   <project path="manifest" name="manifest_plus" remote="afx" />
   <project path="art" name="platform_art" groups="pdk" remote="aex" />
